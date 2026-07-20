@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 
 st.set_page_config(page_title="HAR Activity Classifier", layout="centered")
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = st.secrets.get("API_URL", "http://127.0.0.1:8000/predict")
 
 st.title("Human Activity Recognition")
 st.caption("Classifies activity from raw accelerometer + gyroscope sensor windows, using a Random Forest trained on hand-engineered signal-processing features.")

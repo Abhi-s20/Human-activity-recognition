@@ -6,6 +6,17 @@ import pickle
 
 app = FastAPI(title="HAR Activity Classifier", version="1.0")
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI(title="HAR Activity Classifier", version="1.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # fine for a portfolio project; a real product would restrict this
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # ---------- Load trained model + feature column order ----------
 with open('model/har_rf_model.pkl', 'rb') as f:
     model = pickle.load(f)
