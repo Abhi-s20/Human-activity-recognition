@@ -4,6 +4,12 @@ Classifies six human activities (walking, walking upstairs, walking downstairs, 
 
 **Live components:** FastAPI prediction endpoint and Streamlit dashboard, both built on the best performing model.
 
+**Try it live:**
+- Dashboard: https://human-activity-recognition-shwrhxtcalytnxkdurc7ed.streamlit.app
+- API docs: https://human-activity-recognition-06fr.onrender.com/docs
+
+Both run on free hosting tiers, so the first request after a period of inactivity can take 30-60 seconds to wake up. That's expected, not a bug.
+
 ---
 
 ## Why this project
@@ -131,5 +137,5 @@ Python, scikit-learn, PyTorch, SciPy (signal processing), pandas/NumPy, FastAPI,
 ├── assets/
 │   ├── model_comparison_confusion_matrices.png
 │   └── loso_per_subject_accuracy.png
-└── notebook.ipynb          # Full analysis: feature engineering, model comparison, LOSO
+└── har-analysis.ipynb      # Full analysis: feature engineering, model comparison, LOSO
 ```
