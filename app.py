@@ -8,8 +8,6 @@ app = FastAPI(title="HAR Activity Classifier", version="1.0")
 
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="HAR Activity Classifier", version="1.0")
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # fine for a portfolio project; a real product would restrict this
